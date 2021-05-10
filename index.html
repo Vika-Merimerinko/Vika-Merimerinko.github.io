@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <title>Так пахнет Dior!</title>
     <script src="https://kit.fontawesome.com/2060f788b7.js" crossorigin="anonymous"></script><link rel="stylesheet" href="./style.css">
-      <script type="text/javascript">
-        var audio = new Audio(); // Создаём новый элемент Audio
-        audio.src = 'https://sofia-litvinchuk.github.io/music.mp3'; // Указываем путь к звуку "клика"
-        audio.autoplay = true; // Автоматически запускаем
+  <script type="text/javascript">
+    function soundClick() {
+      var audio = new Audio(); // Создаём новый элемент Audio
+      audio.src = 'https://sofia-litvinchuk.github.io/music.mp3'; // Указываем путь к звуку "клика"
+      audio.autoplay = true; // Автоматически запускаем
+    }
   </script>
   </head>
   <body>
   <!-- partial:index.partial.html -->
   <!--  Artwork by Xaviera López -->
-    <div id="hitler" onclick="music.play();"><span class="center info" id="status_text"></span></div>
+    <div id="hitler" onclick="soundClick();"><span class="center info" id="status_text"></span></div>
     <audio id="music" src="music.mp3" autoplay="" loop="" onplaying="setTimeout(()=>{window.overlay.remove();render();start_text();},3500);" style="display: none;">
     </audio>
     </div>
